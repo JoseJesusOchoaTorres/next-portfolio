@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    # HEADINGS 
+\*------------------------------------*/
+
+h1, h2, h3, h4 {
+    color: $black;
+}
+
+.h1 {
+    font-size: $text-xl;
+}
+
+.h2 {
+    font-size: $text-lg;
+}
+
+.h3 {
+    font-size: $text-md;
+}
+
+.h4 {
+    font-size: $text-sm;
+}
+
+
+    /*------------------------------------*\
+    ## SPECIAL CLASSES
+    \*------------------------------------*/
+
+    .small {
+        font-size: $text-xs;
+    }
+
+    .h1.medium {
+        font-size: $text-xxl;
+    }
+
+    .h1.large {
+        font-size: $text-xxxl;
+    }

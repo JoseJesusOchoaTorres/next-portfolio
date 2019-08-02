@@ -1,3 +1,66 @@
-h1 {
-    color: yellow !important;
-}
+/*------------------------------------*\
+  # GLOBAL SETTINGS
+\*------------------------------------*/
+
+    /*------------------------------------*\
+    ## FONT
+    \*------------------------------------*/
+
+    $font-family-primary: sans-serif;
+    $font-family-secondary: serif;
+    $font-scale-ratio: 1.2;
+    $font-weight: lighter;
+    $font-size:  16px;
+    $line-height: 1;
+
+
+
+
+    /*------------------------------------*\
+    ## COLOR
+    \*------------------------------------*/
+
+    /**
+    * BASIC
+    */
+
+    $black: #000;
+    $white: #FFF;
+
+
+    /**
+    * GRAY
+    */
+
+    $gray-light-1: #FAFAFA;
+    $gray-light-2: #EFEFEF;
+    $gray-1: #999999;
+    $gray-2: #888888;
+    $gray-3: #666666;
+    $gray-dark-1: #444444;
+    $gray-dark-2: #333333;
+    $gray-dark-3: #111111;
+
+
+    /**
+    * BLUE
+    */
+
+    $blue-1: #408bfc;
+    $blue-2: #0062ff;
+    $blue-3: #054ada;
+
+
+
+
+    /*------------------------------------*\
+    ## HEADINGS AND TEXT
+    \*------------------------------------*/
+
+    $text-xs: $font-size / ($font-scale-ratio * $font-scale-ratio);
+    $text-sm: $font-size / $font-scale-ratio;
+    $text-md: $font-size * $font-scale-ratio;
+    $text-lg: $font-size * $font-scale-ratio * $font-scale-ratio;
+    $text-xl: $font-size * $font-scale-ratio * $font-scale-ratio * $font-scale-ratio;
+    $text-xxl: $font-size * $font-scale-ratio * $font-scale-ratio * $font-scale-ratio * $font-scale-ratio;
+    $text-xxxl: $font-size * $font-scale-ratio * $font-scale-ratio * $font-scale-ratio * $font-scale-ratio * $font-scale-ratio;
