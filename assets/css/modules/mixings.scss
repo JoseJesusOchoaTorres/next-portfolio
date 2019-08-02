@@ -1,0 +1,45 @@
+/**
+* GENERATE REPETITIVE CLASSES
+*
+* Description: This mixing is called to generate repetitive classes.
+*
+* @param {map} $map - Map variable where are hosted the keys and values to generate our classes.
+* @param {string} $attribute - This is a string parameter with our property name *('color', 'background-color', 'padding', etc)*.
+* @param {string} $separator ['base'] - This is a string parameter with our separator value.
+*
+* Map example:
+*
+* $colors: (
+*   gray-1: $color-gray-1,
+*   gray-2: $color-gray-2,
+*   ...
+* );
+*
+* Call example:
+*
+* .text-color {
+*   @include generator($colors, 'color', $separator: ':');
+* }
+*
+*
+* Output example:
+*
+* .text-color-gray-1 {
+*   color: #f9f9f9;
+* }
+*
+* ...
+*/
+
+@mixin generator($map, $attribute, $prefix: '-', $separator: '-', $base: 'base') {
+    @each $key, $value in $map {
+        &#{if($key != $base, #{$prefix}#{$key}, '')} {
+            @if type-of($value) == 'map' {
+                @include generator($value, $attribute, $separator);
+            }
+            @else {
+                #{$attribute}: $value;
+            }
+        }
+    }
+}

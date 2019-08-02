@@ -1,0 +1,41 @@
+/*------------------------------------*\
+  # COLORS
+\*------------------------------------*/
+
+ /**
+* The color classes will be generated automatically using the colors map
+* and calling the generator mixing.
+*
+* Example: text-color-black, background-color-black, border-color-black etc
+*/
+
+    $colors: (
+        black: $black,
+        white: $white,
+        gray-light-1: $gray-light-1,
+        gray-light-2: $gray-light-2,
+        gray-1: $gray-1,
+        gray-2: $gray-2,
+        gray-3: $gray-3,
+        gray-dark-1: $gray-dark-1,
+        gray-dark-2: $gray-dark-2,
+        gray-dark-3: $gray-dark-3,
+        blue-1: $blue-1,
+        blue-2: $blue-2,
+        blue-3: $blue-3
+    );
+
+
+    .text-color {
+        @include generator($colors, 'color', $separator: ':');
+    }
+
+    .background-color {
+        @include generator($colors, 'background-color', $separator: ':');
+    }
+
+    .border-color {
+        @include generator($colors, 'border-color', $separator: ':');
+    }
+
+    
