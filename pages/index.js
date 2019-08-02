@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Nav from '../components/nav'
 
+import "../assets/css/main.scss";
+
 const Home = () => (
   <div>
     <Head>
@@ -13,7 +15,7 @@ const Home = () => (
     <div className='hero'>
       
       <h1 className='title'>Sorry</h1>
-      <p className='description'>My cat is working with this page 🐱</p>
+      <p className='description'>My cat is working on this page 🐱</p>
       
     </div>
 
