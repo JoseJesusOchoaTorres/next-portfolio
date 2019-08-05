@@ -1,0 +1,47 @@
+/*------------------------------------*\
+  # SPACING
+\*------------------------------------*/
+
+/**
+* The margin and padding classes will be generated automatically using the spacings map
+* and calling the generator mixing.
+*
+* Example:  padding-top-1, margin-1, padidng-0, etc
+*/
+
+$spacings: (
+    0: 0,
+    1: 0.625,
+    2: 1.25,
+    3: 1.875,
+    4: 2.5,
+    5: 3.125
+);
+
+$spacingSides: (
+    top,
+    right,
+    bottom,
+    left
+);
+
+$properties: padding, margin;
+
+
+
+
+    /*------------------------------------*\
+    ## PADDING AND MARGIN
+    \*------------------------------------*/
+
+    @each $property in $properties {
+         .#{$property} {
+             @include generator($spacings, #{$property}, $separator: ':', $sufix: 'rem');
+
+             @each $side in $spacingSides {
+                 &-#{$side} {
+                     @include generator($spacings, #{$property}-#{$side}, $separator: ':', $sufix: 'rem');
+                 }
+             }
+         }
+    }

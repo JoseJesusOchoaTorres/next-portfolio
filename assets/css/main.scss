@@ -1,6 +1,11 @@
-/* BASE */
-@import './modules/normalize.scss';
-@import './modules/variables.scss';
-@import './modules/mixings.scss';
-@import './modules/colors.scss';
-@import './modules/headings.scss';
+/*------------------------------------*\
+  # MAIN FILE TO INJECT ALL
+\*------------------------------------*/
+
+@import './modules/normalize';
+@import './modules/variables';
+@import './modules/mixings';
+@import './modules/colors';
+@import './modules/headings';
+@import './modules/text';
+@import './modules/spacing';
