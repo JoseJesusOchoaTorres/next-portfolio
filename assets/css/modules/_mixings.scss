@@ -38,3 +38,62 @@
         }
     }
 }
+
+
+
+
+/**
+* GENERATE COLUMN CLASSES
+*
+* Description: This mixing is called to generate all the column classes.
+*
+* @param {string} $breakpoint - This is a string parameter with our breakpoint value *('xm', 'sm', 'ms', 'lg')*.
+*/
+
+@mixin columnsGenerator($breakpoint) {
+    @for $column from 1 to $gridColumns+1 {
+        .col-#{$breakpoint}-#{$column} {
+            // flex-basis: (100% * $column) / $gridColumns;
+            width: (100% * $column) / $gridColumns;
+        }
+    }
+}
+
+
+
+
+/**
+* BREAKPOINTS GENERATOR
+*
+* Description: Creating our breakpoint mixings.
+*/
+
+    /**
+    * SMALL (SM)
+    */
+
+    @mixin sm {
+        @media (min-width: #{$screen-sm-min}) {
+            @content;
+        }
+    }
+
+    /**
+    * MEDIUM (MD)
+    */
+
+    @mixin md {
+        @media (min-width: #{$screen-md-min}) {
+            @content;
+        }
+    }
+
+    /**
+    * LARGE (LG)
+    */
+    
+    @mixin lg {
+        @media (min-width: #{$screen-lg-min}) {
+            @content;
+        }
+    }

@@ -1,0 +1,74 @@
+/*------------------------------------*\
+  # GRID
+\*------------------------------------*/
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+    /*------------------------------------*\
+    ## CONTAINERS
+    \*------------------------------------*/
+
+    .container,
+    .container-fluid {
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    .container {
+        max-width: $widthContainer;
+    }
+
+    .container-fluid {
+        width: 100%;
+    }
+
+
+        /*------------------------------------*\
+        ### ROWS
+        \*------------------------------------*/
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+            /*------------------------------------*\
+            ### COLUMNS
+            \*------------------------------------*/
+
+            /**
+            * EXTRA SMALL (XS)
+            */
+
+            [class*="col-"] {
+                padding: .5rem;
+            }
+
+            .col-xs {
+                flex-grow: 1;
+                flex-basis: 0;
+                max-width: 100%
+            }
+
+           @include columnsGenerator($breakpoint: 'xs');
+
+
+            /**
+            * SMALL (SM), MEDIUM (MD), LARGE (LG)
+            */
+
+            @include sm {
+               @include columnsGenerator($breakpoint: 'sm');
+            }
+            
+            @include md {
+               @include columnsGenerator($breakpoint: 'md');
+            }
+           
+            @include lg {
+               @include columnsGenerator($breakpoint: 'lg');
+            }

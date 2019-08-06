@@ -18,20 +18,12 @@ $spacings: (
     5: 3.125
 );
 
-$spacingSides: (
-    top,
-    right,
-    bottom,
-    left
-);
-
+$spacingSides: top, right, bottom, left;
 $properties: padding, margin;
 
 
-
-
     /*------------------------------------*\
-    ## PADDING AND MARGIN
+    ## PADDINGS AND MARGINS
     \*------------------------------------*/
 
     @each $property in $properties {
