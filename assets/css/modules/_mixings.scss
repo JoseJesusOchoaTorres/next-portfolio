@@ -50,18 +50,87 @@
 * @param {string} $breakpoint - This is a string parameter with our breakpoint value *('xm', 'sm', 'ms', 'lg')*.
 */
 
-@mixin columnsGenerator($breakpoint, $offset: false) {
+@mixin gridGenerator($breakpoint, $offset: false, $ordering: false) {
+
+     /*------------------------------------*\
+    # COLUMNS
+    \*------------------------------------*/
+
     @for $column from 1 to $gridColumns+1 {
         .col-#{$breakpoint}-#{$column} {
             width: (100% * $column) / $gridColumns;
         }
     }
 
+
+    /*------------------------------------*\
+    # OFFSET COLUMNS
+    \*------------------------------------*/
+
     @if $offset {
         @for $column from 1 to $gridColumns+1 {
              .col-#{$breakpoint}-offset-#{$column} {
                  margin-left: (100% * $column) / $gridColumns;
              }
+        }
+    }
+    
+    
+    /*------------------------------------*\
+    # ORDERING
+    \*------------------------------------*/
+
+    @if $ordering {
+        .col-#{$breakpoint}-first {
+            order: -1;
+        }
+        
+        .col-#{$breakpoint}-last {
+            order: 1;
+        }
+    }
+}
+
+
+
+
+/**
+* GENERATE  ALIGNMENT CLASSES 
+*
+* Description: This mixing is generating the alignment classes to elements.
+* These classes can align elements in the horizontal and vertical axis.
+*
+* Map example:
+*
+* $contentAlignments: (
+*       justify-content: (
+*           left: flex-start,
+*           center: center,
+*           right: flex-end
+*       ),
+*       align-items: (
+*           top: flex-start,
+*           middle: center,
+*           bottom: flex-end
+*       ),
+*   );
+*
+*
+* Output example:
+*
+* .sm-right {
+*   justify-content: flex-end;
+* }
+*
+* ...
+*/
+
+@mixin alignmentGenerator($breakpoint) {
+    @each $property, $values in $contentAlignments {
+        @each $id, $value in $values {
+            .#{$breakpoint}-#{$id} {
+                #{$property}: #{$value};
+            }
         }
     }
 }

@@ -1,0 +1,53 @@
+/*------------------------------------*\
+  # ALIGNMENT
+\*------------------------------------*/
+
+	/*------------------------------------*\
+	## TEXT ALIGNMENT
+	\*------------------------------------*/
+
+	.text {
+		&-center {
+			text-align: center;
+		}
+
+		&-right {
+			text-align: right;
+		}
+
+		&-left {
+			text-align: left;
+		}
+	}
+
+
+	/*------------------------------------*\
+	## CONTENT ALIGNMENT
+	\*------------------------------------*/
+
+	$contentAlignments: (
+		justify-content: (
+			left: flex-start,
+			center: center,
+			right: flex-end
+		),
+		align-items: (
+			top: flex-start,
+			middle: center,
+			bottom: flex-end
+		),
+	);
+
+	@include alignmentGenerator($breakpoint: 'xs');
+
+	@include sm {
+		@include alignmentGenerator($breakpoint: 'sm');
+	}
+	
+	@include md {
+		@include alignmentGenerator($breakpoint: 'md');
+	}
+	
+	@include lg {
+		@include alignmentGenerator($breakpoint: 'lg');
+	}

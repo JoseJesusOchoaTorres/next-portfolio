@@ -25,6 +25,11 @@ $properties: padding, margin;
     /*------------------------------------*\
     ## PADDINGS AND MARGINS
     \*------------------------------------*/
+    
+    .nospacing {
+        padding: 0;
+        margin: 0;
+    }
 
     @each $property in $properties {
          .#{$property} {

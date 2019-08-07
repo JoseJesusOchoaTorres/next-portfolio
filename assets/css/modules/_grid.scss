@@ -37,7 +37,7 @@
 
 
             /*------------------------------------*\
-            ### COLUMNS
+            #### COLUMNS
             \*------------------------------------*/
 
             /**
@@ -54,7 +54,7 @@
                 max-width: 100%
             }
 
-           @include columnsGenerator($breakpoint: 'xs');
+           @include gridGenerator($breakpoint: 'xs', $offset: true, $ordering: true);
 
 
             /**
@@ -62,13 +62,22 @@
             */
 
             @include sm {
-               @include columnsGenerator($breakpoint: 'sm', $offset: true);
+               @include gridGenerator($breakpoint: 'sm', $offset: true, $ordering: true);
             }
             
             @include md {
-               @include columnsGenerator($breakpoint: 'md', $offset: true);
+               @include gridGenerator($breakpoint: 'md', $offset: true, $ordering: true);
             }
            
             @include lg {
-               @include columnsGenerator($breakpoint: 'lg', $offset: true);
+               @include gridGenerator($breakpoint: 'lg', $offset: true, $ordering: true);
             }
+
+        
+        /*------------------------------------*\
+        ### ROW REVERSING
+        \*------------------------------------*/
+
+        .row.row-reverse {
+            flex-direction: row-reverse;
+        }
