@@ -50,11 +50,18 @@
 * @param {string} $breakpoint - This is a string parameter with our breakpoint value *('xm', 'sm', 'ms', 'lg')*.
 */
 
-@mixin columnsGenerator($breakpoint) {
+@mixin columnsGenerator($breakpoint, $offset: false) {
     @for $column from 1 to $gridColumns+1 {
         .col-#{$breakpoint}-#{$column} {
-            // flex-basis: (100% * $column) / $gridColumns;
             width: (100% * $column) / $gridColumns;
+        }
+    }
+
+    @if $offset {
+        @for $column from 1 to $gridColumns+1 {
+             .col-#{$breakpoint}-offset-#{$column} {
+                 margin-left: (100% * $column) / $gridColumns;
+             }
         }
     }
 }

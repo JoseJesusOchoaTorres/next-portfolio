@@ -62,13 +62,13 @@
             */
 
             @include sm {
-               @include columnsGenerator($breakpoint: 'sm');
+               @include columnsGenerator($breakpoint: 'sm', $offset: true);
             }
             
             @include md {
-               @include columnsGenerator($breakpoint: 'md');
+               @include columnsGenerator($breakpoint: 'md', $offset: true);
             }
            
             @include lg {
-               @include columnsGenerator($breakpoint: 'lg');
+               @include columnsGenerator($breakpoint: 'lg', $offset: true);
             }
