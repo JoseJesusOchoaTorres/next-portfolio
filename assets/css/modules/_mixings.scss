@@ -125,8 +125,8 @@
 * ...
 */
 
-@mixin alignmentGenerator($breakpoint) {
-    @each $property, $values in $contentAlignments {
+@mixin alignmentGenerator($breakpoint, $content) {
+    @each $property, $values in $content {
         @each $id, $value in $values {
             .#{$breakpoint}-#{$id} {
                 #{$property}: #{$value};
@@ -139,7 +139,7 @@
 
 
 /**
-* BREAKPOINTS GENERATOR
+* BREAKPOINT MIXINGS
 *
 * Description: Creating our breakpoint mixings.
 */

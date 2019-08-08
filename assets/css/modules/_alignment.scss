@@ -38,16 +38,16 @@
 		),
 	);
 
-	@include alignmentGenerator($breakpoint: 'xs');
+	 @include alignmentGenerator($breakpoint: 'xs', $content: $contentAlignments);
 
-	@include sm {
-		@include alignmentGenerator($breakpoint: 'sm');
-	}
-	
-	@include md {
-		@include alignmentGenerator($breakpoint: 'md');
-	}
-	
-	@include lg {
-		@include alignmentGenerator($breakpoint: 'lg');
-	}
+	 @include sm {
+	 	@include alignmentGenerator($breakpoint: 'sm', $content: $contentAlignments);
+	 }
+
+	 @include md {
+	 	@include alignmentGenerator($breakpoint: 'md', $content: $contentAlignments);
+	 }
+
+	 @include lg {
+	 	@include alignmentGenerator($breakpoint: 'lg', $content: $contentAlignments);
+	 }

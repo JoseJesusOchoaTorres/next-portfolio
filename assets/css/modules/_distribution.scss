@@ -1,0 +1,29 @@
+/*------------------------------------*\
+  # DISTRIBUTION
+\*------------------------------------*/
+
+    /*------------------------------------*\
+	## CONTENT DISTRIBUTION
+	\*------------------------------------*/
+
+    $contentDistribution: (
+        justify-content: (
+            around: space-around,
+            between: space-between,
+            evenly: space-evenly
+        )
+    );
+
+    @include alignmentGenerator($breakpoint: 'xs', $content: $contentDistribution);
+
+    @include sm {
+        @include alignmentGenerator($breakpoint: 'sm', $content: $contentDistribution);
+    }
+
+    @include md {
+        @include alignmentGenerator($breakpoint: 'md', $content: $contentDistribution);
+    }
+
+    @include lg {
+        @include alignmentGenerator($breakpoint: 'lg', $content: $contentDistribution);
+    }
