@@ -57,7 +57,7 @@
     \*------------------------------------*/
 
     @for $column from 1 to $gridColumns+1 {
-        .col-#{$breakpoint}-#{$column} {
+        .#{$prefix}col-#{$breakpoint}-#{$column} {
             width: (100% * $column) / $gridColumns;
         }
     }
@@ -69,7 +69,7 @@
 
     @if $offset {
         @for $column from 1 to $gridColumns+1 {
-             .col-#{$breakpoint}-offset-#{$column} {
+             .#{$prefix}col-#{$breakpoint}-offset-#{$column} {
                  margin-left: (100% * $column) / $gridColumns;
              }
         }
@@ -81,11 +81,11 @@
     \*------------------------------------*/
 
     @if $ordering {
-        .col-#{$breakpoint}-first {
+        .#{$prefix}col-#{$breakpoint}-first {
             order: -1;
         }
         
-        .col-#{$breakpoint}-last {
+        .#{$prefix}col-#{$breakpoint}-last {
             order: 1;
         }
     }
@@ -128,7 +128,7 @@
 @mixin alignmentGenerator($breakpoint, $content) {
     @each $property, $values in $content {
         @each $id, $value in $values {
-            .#{$breakpoint}-#{$id} {
+            .#{$prefix}#{$breakpoint}-#{$id} {
                 #{$property}: #{$value};
             }
         }

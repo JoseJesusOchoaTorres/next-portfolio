@@ -2,6 +2,23 @@
   # GLOBAL SETTINGS
 \*------------------------------------*/
 
+	/*------------------------------------*\
+	## PREFIX
+	\*------------------------------------*/
+
+	/**
+	* Description: The prefix will be concatenated at the beginning of each class.
+	*
+	* If you do not want to use a prefix, keep the variable $prefix with the false value.
+	* If you want to use a prefix, replace the variable $prefix with a text string.
+	*
+	* @var {string, boolean} $prefix 
+	*/
+
+	$prefix: false;
+	$prefix: if($prefix, $prefix + '-', '');
+
+
     /*------------------------------------*\
     ## FONT
     \*------------------------------------*/

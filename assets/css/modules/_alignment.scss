@@ -6,7 +6,7 @@
 	## TEXT ALIGNMENT
 	\*------------------------------------*/
 
-	.text {
+	.#{$prefix}text {
 		&-center {
 			text-align: center;
 		}

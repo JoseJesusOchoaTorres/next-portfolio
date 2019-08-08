@@ -6,23 +6,23 @@
     ## TEXT WEIGHTS 
     \*------------------------------------*/
 
-    .bolder {
+    .#{$prefix}bolder {
         font-weight: bolder;
     }
 
-    .bold {
+    .#{$prefix}bold {
         font-weight: bold;
     }
 
-    .regular {
+    .#{$prefix}regular {
         font-weight: normal;
     }
 
-    .light {
+    .#{$prefix}light {
         font-weight: lighter;
     }
 
-    .thin {
+    .#{$prefix}thin {
         font-weight: 100;
     }
 
@@ -31,6 +31,6 @@
     ## TEXT TRANSFORM
     \*------------------------------------*/
 
-    .text-uppercase {
+    .#{$prefix}text-uppercase {
         text-transform: uppercase;
     }

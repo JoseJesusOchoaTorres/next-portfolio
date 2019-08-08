@@ -18,6 +18,12 @@ $spacings: (
     5: 3.125
 );
 
+$responsiveSpacings: (
+    r1: 2,
+    r2: 5,
+    r3: 10
+);
+
 $spacingSides: top, right, bottom, left;
 $properties: padding, margin;
 
@@ -26,18 +32,20 @@ $properties: padding, margin;
     ## PADDINGS AND MARGINS
     \*------------------------------------*/
     
-    .nospacing {
+    .#{$prefix}nospacing {
         padding: 0;
         margin: 0;
     }
 
     @each $property in $properties {
-         .#{$property} {
+         .#{$prefix}#{$property} {
              @include generator($spacings, #{$property}, $separator: ':', $sufix: 'rem');
+             @include generator($responsiveSpacings, #{$property}, $separator: ':', $sufix: 'vw');
 
              @each $side in $spacingSides {
                  &-#{$side} {
                      @include generator($spacings, #{$property}-#{$side}, $separator: ':', $sufix: 'rem');
+                     @include generator($responsiveSpacings, #{$property}-#{$side}, $separator: ':', $sufix: 'vw');
                  }
              }
          }

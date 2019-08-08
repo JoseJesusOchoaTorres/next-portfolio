@@ -26,15 +26,15 @@
     );
 
 
-    .text-color {
+    .#{$prefix}text-color {
         @include generator($colors, 'color', $separator: ':');
     }
 
-    .background-color {
+    .#{$prefix}background-color {
         @include generator($colors, 'background-color', $separator: ':');
     }
 
-    .border-color {
+    .#{$prefix}border-color {
         @include generator($colors, 'border-color', $separator: ':');
     }
 

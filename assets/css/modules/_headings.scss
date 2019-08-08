@@ -2,23 +2,19 @@
     # HEADINGS 
 \*------------------------------------*/
 
-h1, h2, h3, h4 {
-    color: $black;
-}
-
-.h1 {
+.#{$prefix}h1 {
     font-size: $text-xl;
 }
 
-.h2 {
+.#{$prefix}h2 {
     font-size: $text-lg;
 }
 
-.h3 {
+.#{$prefix}h3 {
     font-size: $text-md;
 }
 
-.h4 {
+.#{$prefix}h4 {
     font-size: $text-sm;
 }
 
@@ -27,14 +23,14 @@ h1, h2, h3, h4 {
     ## SPECIAL CLASSES
     \*------------------------------------*/
 
-    .small {
+    .#{$prefix}small {
         font-size: $text-xs;
     }
 
-    .h1.medium {
+    .#{$prefix}h1.#{$prefix}medium {
         font-size: $text-xxl;
     }
 
-    .h1.large {
+    .#{$prefix}h1.#{$prefix}large {
         font-size: $text-xxxl;
     }

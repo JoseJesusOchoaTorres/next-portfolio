@@ -11,17 +11,17 @@
     ## CONTAINERS
     \*------------------------------------*/
 
-    .container,
-    .container-fluid {
+    .#{$prefix}container,
+    .#{$prefix}container-fluid {
         margin-right: auto;
         margin-left: auto
     }
 
-    .container {
+    .#{$prefix}container {
         max-width: $widthContainer;
     }
 
-    .container-fluid {
+    .#{$prefix}container-fluid {
         width: 100%;
     }
 
@@ -30,7 +30,7 @@
         ### ROWS
         \*------------------------------------*/
 
-        .row {
+        .#{$prefix}row {
             display: flex;
             flex-wrap: wrap;
         }
@@ -48,7 +48,7 @@
                 padding: .5rem;
             }
 
-            .col-xs {
+            .#{$prefix}col-xs {
                 flex-grow: 1;
                 flex-basis: 0;
                 max-width: 100%
@@ -78,6 +78,6 @@
         ### ROW REVERSING
         \*------------------------------------*/
 
-        .row.row-reverse {
+        .#{$prefix}row.#{$prefix}row-reverse {
             flex-direction: row-reverse;
         }
