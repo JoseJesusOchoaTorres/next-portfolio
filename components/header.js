@@ -26,6 +26,7 @@ const Header = () => (
 					background-size: fit;
 					-webkit-text-fill-color: transparent;
 					color: transparent;
+					word-break: break-word;
 					font-weight: 900;
 					font-size: 30vmin;
 					margin: 1rem;
@@ -54,7 +55,7 @@ const Header = () => (
 						50%{background-position:100% 50%}
 						100%{background-position:0% 50%}
 					}
-					
+
 					@keyframes headerAnimation { 
 						0%{background-position:0% 50%}
 						50%{background-position:100% 50%}
