@@ -6,12 +6,14 @@ const Header = () => (
 			<p className="header__title">
 				Hello <span className="header__title--uppercase">world!</span>
 			</p>
+
+			<div className="header__scroll-animation"></div>
 		</div>
 
 		<style jsx>{`
 			.header {
 				background-image: linear-gradient(-90deg, var(--white), var(--gray-light-2));
-				height: 200vh;
+				height: 100vh;
 			}
 
 				.header__title {
@@ -61,6 +63,35 @@ const Header = () => (
 						50%{background-position:100% 50%}
 						100%{background-position:0% 50%}
 					}
+
+				.header__scroll-animation {
+					clip-path: polygon(50% 100%, 0 0, 100% 0);
+					background-color: var(--black, black);
+					transform-origin: center;
+					transitioon: all 0.3s;
+					position: absolute;
+					bottom: 2rem;
+					height: 20px;
+					width: 20px;
+					left: 50%;
+
+					animation: scroll 3s infinite;
+				}
+
+				@keyframes scroll {
+					0% { 
+						opacity: 0;
+					}
+					50% {
+						transform: translate(0, 1rem);
+						opacity: 1;
+					}
+					100% {
+						opacity: 0;
+					}
+				}
+
+
 		`}</style>
 	</header>
 )
