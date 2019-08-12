@@ -16,6 +16,9 @@ const Home = () => (
     	</Head>
 
 		<Header></Header>
+		<Nav></Nav>
+
+		<div style={{ height: '500vh', background: 'gray'}}></div>
 
 		<style jsx global>{`
 			:root {

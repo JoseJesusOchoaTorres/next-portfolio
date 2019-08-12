@@ -2,53 +2,63 @@ import React from 'react'
 import Link from 'next/link'
 
 const links = [
-  { href: 'https://zeit.co/now', label: 'ZEIT' },
-  { href: 'https://github.com/zeit/next.js', label: 'GitHub' }
+  { href: '#about', label: 'About' },
+  { href: '#resume', label: 'Resume' },
+  { href: '#portfolio', label: 'Portfolio' },
+  { href: '#contact', label: 'Contact' }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
 })
 
 const Nav = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
-      </li>
-      {links.map(({ key, href, label }) => (
-        <li key={key}>
-          <a href={href}>{label}</a>
-        </li>
-      ))}
-    </ul>
+	<nav className="navigation">
+		<ul className="navigation__ul">
+      		{links.map(({ key, href, label }) => (
+			<li className="navigation__li" key={key}>
+				<a className="navigation__anchor" href={href}>{label}</a>
+			</li>
+      		))}
+    	</ul>
 
-    <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
-      }
-      nav {
-        text-align: center;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      nav > ul {
-        padding: 4px 16px;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      a {
-        color: #067df7;
-        text-decoration: none;
-        font-size: 13px;
-      }
+	<style jsx>{`
+		.navigation {
+			background  linear-gradient(to right, var(--white, white), transparent);
+			border-bottom: 1px solid var(--gray-light-2);
+			text-align: center;
+			position: sticky;
+			top: 0px;
+		}
+	 
+			.navigation__ul {
+				display: flex;
+				justify-content: space-between;
+				padding: 0.5rem 1rem;
+				max-width: 500px;
+				margin: 0;
+			}
+
+				.navigation__li {
+					display: flex;
+				}
+
+				.navigation__anchor {
+					color: var(--gray-3, gray);
+					text-decoration: none;
+					transition: all 0.3s;
+					font-size: 0.8rem;
+					padding: 1rem;
+				}
+
+					.navigation__anchor:hover,
+					.navigation__anchor:focus {
+						color: var(--black, black);
+					}
+
+					.navigation__anchor:focus {
+						box-shadow: 0 -4px inset var(--blue-3, black);
+					}
+					
     `}</style>
   </nav>
 )

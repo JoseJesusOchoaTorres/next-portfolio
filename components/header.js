@@ -70,7 +70,7 @@ const Header = () => (
 					transform-origin: center;
 					transitioon: all 0.3s;
 					position: absolute;
-					bottom: 2rem;
+					bottom: 7rem;
 					height: 20px;
 					width: 20px;
 					left: 50%;
@@ -80,6 +80,7 @@ const Header = () => (
 
 				@keyframes scroll {
 					0% { 
+						transform: scale(0.8);
 						opacity: 0;
 					}
 					50% {
@@ -87,6 +88,7 @@ const Header = () => (
 						opacity: 1;
 					}
 					100% {
+						transform: scale(0.8);
 						opacity: 0;
 					}
 				}
