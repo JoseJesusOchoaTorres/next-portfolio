@@ -4,7 +4,7 @@ import Link from 'next/link'
 const links = [
   { href: '#about', label: 'About' },
   { href: '#resume', label: 'Resume' },
-  { href: '#portfolio', label: 'Portfolio' },
+  { href: '#articles', label: 'Articles' },
   { href: '#contact', label: 'Contact' }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
@@ -24,7 +24,7 @@ const Nav = () => (
 	<style jsx>{`
 		.navigation {
 			background  linear-gradient(to right, var(--white, white), transparent);
-			border-bottom: 1px solid var(--gray-light-2);
+			border-bottom: 1px solid var(--gray-light-2, gray);
 			text-align: center;
 			position: sticky;
 			top: 0px;
@@ -46,7 +46,6 @@ const Nav = () => (
 					color: var(--gray-3, gray);
 					text-decoration: none;
 					transition: all 0.3s;
-					font-size: 0.8rem;
 					padding: 1rem;
 				}
 

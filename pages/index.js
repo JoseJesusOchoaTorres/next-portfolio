@@ -3,8 +3,10 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import Nav from '../components/nav'
 import Header from '../components/header'
+import Nav from '../components/nav'
+
+import About from '../components/about'
 
 import "../assets/css/main.scss";
 
@@ -18,6 +20,7 @@ const Home = () => (
 		<Header></Header>
 		<Nav></Nav>
 
+		<About></About>
 		<div style={{ height: '500vh', background: 'gray'}}></div>
 
 		<style jsx global>{`
@@ -38,11 +41,11 @@ const Home = () => (
 			}
 
 			body {
-				background-color: var(--white);
+				background-color: var(--white, white);
 				font-family: sans-serif, arial;
-				color: var(--gray-dark-2);
+				color: var(--gray-3, gray);
 				font-weight: lighter;
-				font-size: 16px;
+				font-size: 13px;
 				line-height: 1;
 			}
 		`}</style>
