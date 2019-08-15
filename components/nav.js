@@ -16,7 +16,7 @@ const Nav = () => (
 		<ul className="navigation__ul flex xs-between padding-1 margin-0">
       		{links.map(({ key, href, label }) => (
 			<li className="navigation__li flex" key={key}>
-				<a className="navigation__anchor text-color-gray-3 padding-2" href={href}>{label}</a>
+				<a className="navigation__anchor text-color-gray-3 padding-top-1 padding-right-2 padding-bottom-1 padding-left-2" href={href}>{label}</a>
 			</li>
       		))}
     	</ul>

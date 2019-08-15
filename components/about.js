@@ -2,6 +2,12 @@ import React from 'react'
 import Card from './card'
 import Text from './text'
 
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faLinkedinIn,  faTwitter, faInstagram, faFacebookF, faGithub} from '@fortawesome/free-brands-svg-icons/'
+//import { faLinkedinIn} from '@fortawesome/free-brands-svg-icons/faLinkedinIn'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const About = () => (
     <section id="about" className="about-section container-fluid background-color-gray-light-1 text-color-black light padding-top-r1 padding-bottom-r1">
         <div className="row">
@@ -24,15 +30,31 @@ const About = () => (
                         <li><span className="text-color-black">Cellphone:</span> <a href="tel:+524525290255" target="__blank">(+52) 4525290255</a></li>
                     </ul>
 
-                    <ul className="flex">
-                        <li><i class="fas fa-camera">Algo</i></li>
+                    <ul className="social-container flex nospacing padding-top-2">
+                        <li className="margin-right-1"><a href="#" target="__blank" className="social__anchor text-color-white background-color-black">Linkedin</a></li>
+                        <li className="margin-right-1"><a href="#" target="__blank" className="social__anchor text-color-white background-color-black">Twitter</a></li>
+                        <li className="margin-right-1"><a href="#" target="__blank" className="social__anchor text-color-white background-color-black">Instagram</a></li>
+                        <li><a href="#" target="__blank" className="social__anchor text-color-white background-color-black">Facebook</a></li>
                     </ul>
                 </Card>
             </div>
         </div>
 
         <style jsx>{`
-           
+            .social-container {
+                border-top: 1px solid var(--gray-light-2);
+                list-style: none;
+            }
+
+                .social__anchor {
+                    padding: 0.3rem 0.8rem;
+                    border-radius: 0.2rem;
+                }
+                
+                    .social__anchor:hover {
+                       background-color: var(--blue-3);
+                       color: var(--white, white);
+                    }
         `}</style>
     </section>
 )

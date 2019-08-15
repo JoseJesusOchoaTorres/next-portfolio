@@ -53,7 +53,9 @@ const Home = () => (
 			}
 
 			a {
+				text-decoration: none;
 				color: var(--blue-3);
+				transition: all 0.3s;
 			}
 		`}</style>
   	</div>

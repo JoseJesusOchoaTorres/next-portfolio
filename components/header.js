@@ -28,6 +28,7 @@ const Header = () => (
 					color: transparent;
 					word-break: break-word;
 					font-size: 30vmin;
+					line-height: 1;
 				}
 
 					.header__title--uppercase {
