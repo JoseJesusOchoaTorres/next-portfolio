@@ -30,7 +30,7 @@
         ### ROWS
         \*------------------------------------*/
 
-        .#{$prefix}row {
+        .#{$prefix}row, .#{$prefix}flex {
             display: flex;
             flex-wrap: wrap;
         }

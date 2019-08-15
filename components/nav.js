@@ -12,11 +12,11 @@ const links = [
 })
 
 const Nav = () => (
-	<nav className="navigation">
-		<ul className="navigation__ul">
+	<nav className="navigation text-center">
+		<ul className="navigation__ul flex xs-between padding-1 margin-0">
       		{links.map(({ key, href, label }) => (
-			<li className="navigation__li" key={key}>
-				<a className="navigation__anchor" href={href}>{label}</a>
+			<li className="navigation__li flex" key={key}>
+				<a className="navigation__anchor text-color-gray-3 padding-2" href={href}>{label}</a>
 			</li>
       		))}
     	</ul>
@@ -25,28 +25,17 @@ const Nav = () => (
 		.navigation {
 			background  linear-gradient(to right, var(--white, white), transparent);
 			border-bottom: 1px solid var(--gray-light-2, gray);
-			text-align: center;
 			position: sticky;
 			top: 0px;
 		}
 	 
 			.navigation__ul {
-				display: flex;
-				justify-content: space-between;
-				padding: 0.5rem 1rem;
 				max-width: 500px;
-				margin: 0;
 			}
 
-				.navigation__li {
-					display: flex;
-				}
-
 				.navigation__anchor {
-					color: var(--gray-3, gray);
 					text-decoration: none;
 					transition: all 0.3s;
-					padding: 1rem;
 				}
 
 					.navigation__anchor:hover,

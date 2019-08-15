@@ -13,7 +13,7 @@ import "../assets/css/main.scss";
 const Home = () => (
 	<div>
 		<Head>
-      		<link rel="icon" href="../static/favicon.ico" sizes="32x32" type="image/png" />
+			<link rel="icon" href="../static/favicon.ico" sizes="32x32" type="image/png" />
       		<title>Jose Jesus &#8226; Software engineer</title>
     	</Head>
 
@@ -38,15 +38,22 @@ const Home = () => (
 				--blue-1: #408bfc;
 				--blue-2: #0062ff;
 				--blue-3: #054ada;
+
+				--font-size: 13px;
+				--line-height: 1.5;
 			}
 
 			body {
 				background-color: var(--white, white);
+				font-size: var(--font-size, 13px);
+				line-height: var(--line-height);
 				font-family: sans-serif, arial;
 				color: var(--gray-3, gray);
 				font-weight: lighter;
-				font-size: 13px;
-				line-height: 1;
+			}
+
+			a {
+				color: var(--blue-3);
 			}
 		`}</style>
   	</div>
