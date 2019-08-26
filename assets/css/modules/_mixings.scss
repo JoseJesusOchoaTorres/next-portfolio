@@ -50,7 +50,7 @@
 * @param {string} $breakpoint - This is a string parameter with our breakpoint value *('xm', 'sm', 'ms', 'lg')*.
 */
 
-@mixin gridGenerator($breakpoint, $offset: false, $ordering: false) {
+@mixin gridGenerator($breakpoint, $offset: false, $ordering: false, $hidding: false) {
 
      /*------------------------------------*\
     # COLUMNS
@@ -77,7 +77,7 @@
     
     
     /*------------------------------------*\
-    # ORDERING
+    # HIDDING ELEMENTS
     \*------------------------------------*/
 
     @if $ordering {
@@ -89,6 +89,17 @@
             order: 1;
         }
     }
+
+    /*------------------------------------*\
+    # ORDERING
+    \*------------------------------------*/
+
+    @if $hidding {
+        .#{$prefix}#{$breakpoint}-hide {
+            display: none;
+        }
+    }
+
 }
 
 

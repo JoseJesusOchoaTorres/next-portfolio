@@ -52,6 +52,7 @@ const Home = () => (
 				background-color: var(--white, white);
 				font-size: var(--font-size, 13px);
 				line-height: var(--line-height);
+				overflow-wrap: break-word;
 				font-family: sans-serif, arial;
 				color: var(--gray-3, gray);
 				font-weight: lighter;

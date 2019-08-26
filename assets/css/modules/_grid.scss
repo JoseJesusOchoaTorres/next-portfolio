@@ -35,6 +35,10 @@
             flex-wrap: wrap;
         }
 
+        .#{$prefix}nowrap {
+            flex-wrap: nowrap;
+        }
+
 
             /*------------------------------------*\
             #### COLUMNS
@@ -54,7 +58,7 @@
                 max-width: 100%
             }
 
-           @include gridGenerator($breakpoint: 'xs', $offset: true, $ordering: true);
+           @include gridGenerator($breakpoint: 'xs', $offset: true, $ordering: true, $hidding: true);
 
 
             /**
@@ -62,15 +66,15 @@
             */
 
             @include sm {
-               @include gridGenerator($breakpoint: 'sm', $offset: true, $ordering: true);
+               @include gridGenerator($breakpoint: 'sm', $offset: true, $ordering: true, $hidding: true);
             }
             
             @include md {
-               @include gridGenerator($breakpoint: 'md', $offset: true, $ordering: true);
+               @include gridGenerator($breakpoint: 'md', $offset: true, $ordering: true, $hidding: true);
             }
            
             @include lg {
-               @include gridGenerator($breakpoint: 'lg', $offset: true, $ordering: true);
+               @include gridGenerator($breakpoint: 'lg', $offset: true, $ordering: true, $hidding: true);
             }
 
         
