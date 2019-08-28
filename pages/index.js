@@ -7,6 +7,7 @@ import Header from '../components/header'
 import Nav from '../components/nav'
 
 import About from '../components/about'
+import Articles from '../components/articles'
 
 import Footer from '../components/footer'
 
@@ -25,6 +26,7 @@ const Home = () => (
 		<Nav></Nav>
 
 		<About></About>
+		<Articles></Articles>
 
 		<Footer></Footer>
 

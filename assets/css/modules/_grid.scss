@@ -19,6 +19,8 @@
 
     .#{$prefix}container {
         max-width: $widthContainer;
+        flex-grow: 1;
+        width: auto;
     }
 
     .#{$prefix}container-fluid {

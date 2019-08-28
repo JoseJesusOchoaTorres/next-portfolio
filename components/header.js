@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => (
 	<header className="header row xs-middle">
-		<div className="container-fluid bold">
+		<div className="container bold">
 			<p className="header__title background-color-blue-3 margin-2">
 				Hello <span className="header__title--uppercase">world!</span>
 			</p>

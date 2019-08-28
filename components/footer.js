@@ -1,11 +1,10 @@
 import React from 'react'
-import Text from './text'
 import Button from './button'
 
 const Footer = () => (
-    <footer className="footer background-color-gray-light-1 padding-r1 flex xs-between">
+    <footer className="footer background-color-gray-light-1 padding-top-r1 padding-bottom-r1 flex xs-between">
 
-        <div className="container-fluid">
+        <div className="container">
             <div className="row">
                 <div className="col-xs-12 col-sm-2 text-center">
                     <h2 className="h1 footer__name text-color-black light flex xs-middle padding-right-3">Jose Jesus</h2>

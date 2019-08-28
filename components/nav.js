@@ -13,17 +13,19 @@ const links = [
 
 const Nav = () => (
 	<nav className="navigation text-center">
-		<ul className="navigation__ul flex xs-between padding-1 margin-0">
-      		{links.map(({ key, href, label }) => (
-			<li className="navigation__li flex" key={key}>
-				<a className="navigation__anchor text-color-gray-3 padding-top-1 padding-right-2 padding-bottom-1 padding-left-2" href={href}>{label}</a>
-			</li>
-      		))}
-    	</ul>
+		<div className="container">
+			<ul className="navigation__ul flex xs-between padding-1 margin-0">
+      			{links.map(({ key, href, label }) => (
+				<li className="navigation__li flex" key={key}>
+					<a className="navigation__anchor text-color-gray-3 padding-top-1 padding-right-2 padding-bottom-1 padding-left-2" href={href}>{label}</a>
+				</li>
+      			))}
+    		</ul>
+		</div>
 
 	<style jsx>{`
 		.navigation {
-			background  linear-gradient(to right, var(--white, white), transparent);
+			background  linear-gradient(to right, var(--white, white) 30%, transparent);
 			border-bottom: 1px solid var(--gray-light-2, gray);
 			position: sticky;
 			top: 0px;
