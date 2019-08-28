@@ -16,7 +16,7 @@ const About = () => (
                     <Text tag="h2" cssClass="h2 nospacing padding-bottom-1">Who am I?</Text>
                     <Text tag="h1" cssClass="h4 text-uppercase text-color-blue-3 light">Jose Jesus Ochoa Torres</Text>
                     <Text tag="p" cssClass="text-color-gray-3 padding-bottom-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo ante, sodales id nibh sed, dictum commodo arcu. Nulla commodo at tellus non vehicula. Pellentesque at efficitur eros. Cras auctor elementum est quis consequat. Fusce dignissim turpis in massa pretium, sed pulvinar velit vulputate. Vestibulum congue et leo vel tincidunt. Quisque congue molestie lacus tincidunt fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo ante, sodales id nibh sed, dictum commodo arcu. Nulla commodo at tellus non vehicula. Pellentesque at efficitur eros. Cras auctor elementum est quis consequat. Fusce dignissim turpis in massa pretium, sed pulvinar velit vulputate. Vestibulum congue et leo vel tincidunt.</Text>
-                    <p><Button href="#" className="button button--primary" download>Download resume</Button></p>
+                    <Button href="#" className="button button--primary" download>Download resume</Button>
                 </Card>
             </div>
 

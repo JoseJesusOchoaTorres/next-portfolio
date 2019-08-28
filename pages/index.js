@@ -63,6 +63,7 @@ const Home = () => (
 				a {
 					color: var(--blue-3, blue);
 					text-decoration: none;
+					display: inline-block;
 					transition: all 0.3s;
 				}
 		`}</style>

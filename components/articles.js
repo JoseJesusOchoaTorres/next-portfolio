@@ -1,13 +1,18 @@
 import React from 'react'
 import Text from './text'
 import Card from './card'
+import Button from './button'
 
 const Articles = () => (
     <section className="container padding-top-r2 padding-bottom-r2">
         <div className="row">
-            <div className="col-xs-12">
+            <div className="col-xs-12 col-sm-6">
                 <Text tag="h3" cssClass="h1 text-color-black nospacing padding-left-2 padding-right-2">What's New</Text>
                 <Text tag="h4" cssClass="h4 text-uppercase light padding-left-2 padding-right-2">Latest Published Courses & Lessons</Text>
+            </div>
+
+            <div className="col-xs-12 col-sm-6 flex xs-middle xs-left sm-right">
+                <Button href="#" className="button button--primary margin-2" target="__blank">See all the articles →</Button>
             </div>
         </div>
 
