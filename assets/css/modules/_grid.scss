@@ -13,8 +13,10 @@
 
     .#{$prefix}container,
     .#{$prefix}container-fluid {
+        padding-right: 1rem;
+        padding-left: 1rem;
         margin-right: auto;
-        margin-left: auto
+        margin-left: auto;
     }
 
     .#{$prefix}container {
