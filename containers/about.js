@@ -1,7 +1,7 @@
 import React from 'react'
-import Card from './card'
-import Text from './text'
-import Button from './button'
+import Card from '../components/card'
+import Text from '../components/text'
+import Button from '../components/button'
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faLinkedinIn,  faTwitter, faInstagram, faFacebookF, faGithub} from '@fortawesome/free-brands-svg-icons/'

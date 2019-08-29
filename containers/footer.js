@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './button'
+import Button from '../components/button'
 
 const Footer = () => (
     <footer className="footer background-color-gray-light-1 padding-top-r1 padding-bottom-r1 flex xs-between">

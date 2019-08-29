@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Card = props => (
-    <div className={"card " + props.className}>
+    <div className="card ">
         {props.children}
 
         <style jsx>{`
@@ -14,7 +14,7 @@ const Card = props => (
                 margin: 1rem;
             }
             
-            .card--link:hover {
+            .card:hover {
                 box-shadow: 0 6px 13px rgba(0, 0, 0, 0.15);
             }
         `}</style>
