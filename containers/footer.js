@@ -36,7 +36,7 @@ const Footer = () => (
                     <form className="padding-top-2">
                         <label htmlFor="email" className="flex text-uppercase text-color-black padding-bottom-2">Would you like to know when I publish a new article?</label>
                         <div className="flex nowrap">
-                            <input className="input--text fullwidth" id="email" type="email" placeholder="Email" />
+                            <input className="input--text width-100" id="email" type="email" placeholder="Email" />
                             <input type="submit" className="button button--primary button--input" value="Subscribe" />
                         </div>
                     </form>

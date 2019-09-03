@@ -20,7 +20,7 @@ const Articles = props => (
         <div className="row">
             
          {props.data.items.map((article) =>
-            <Article link={article.link} thumbnail={article.thumbnail}  title={article.title} description={article.description} pubDate={article.pubDate}></Article>
+            <Article key={article.title} link={article.link} thumbnail={article.thumbnail}  title={article.title} description={article.description} pubDate={article.pubDate}></Article>
         )}
 
         </div>

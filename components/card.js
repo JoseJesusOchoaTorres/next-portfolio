@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Card = props => (
-    <div className="card ">
+    <div className={`card ${props.className}`}>
         {props.children}
 
         <style jsx>{`
@@ -10,7 +10,6 @@ const Card = props => (
                 background-color: var(--white, white);
                 border-radius: 0.3rem;
                 transition: all 0.3s;
-                padding: 1.5rem;
                 margin: 1rem;
             }
             
