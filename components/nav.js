@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 
 const links = [
-  	{ href: '#about', label: 'About' },
-  	{ href: '#resume', label: 'Resume' },
-  	{ href: '#articles', label: 'Articles' },
+  	{ href: '/', label: 'Home' },
+  	{ href: '/articles', label: 'Articles' },
+  	{ href: '/about', label: 'About' },
   	{ href: '/contact', label: 'Contact' }
 ].map(link => {
 	link.key = `nav-link-${link.href}-${link.label}`
@@ -18,10 +18,10 @@ const Nav = () => (
 		<div className="container">
 			<ul className="navigation__ul flex xs-between padding-1 margin-0">
       			{links.map(({ key, href, label }) => (
-				<li className="navigation__li flex">
-				<Link key={key} href={href}>
-					<a title={label} className="navigation__anchor text-color-gray-3 padding-top-1 padding-right-2 padding-bottom-1 padding-left-2">{label}</a>
-				</Link>
+				<li key={key} className="navigation__li flex">
+					<Link  href={href}>
+						<a title={label} className="navigation__anchor text-color-gray-3 padding-top-1 padding-right-2 padding-bottom-1 padding-left-2">{label}</a>
+					</Link>
 				</li>
       			))}
     		</ul>
@@ -36,7 +36,9 @@ const Nav = () => (
 		}
 	 
 			.navigation__ul {
+				flex-wrap: nowrap;
 				max-width: 500px;
+				overflow: auto;
 			}
 
 				.navigation__anchor {

@@ -10,7 +10,7 @@ import Nav from '../components/nav'
 import About from '../containers/about'
 import Articles from '../containers/articles'
 
-import Footer from '../containers/footer'
+import Footer from '../components/footer'
 
 import "../assets/css/main.scss";
 
