@@ -29,7 +29,7 @@ const Nav = () => (
 
 	<style jsx>{`
 		.navigation {
-			background  linear-gradient(to right, var(--white, white) 30%, transparent);
+			background  linear-gradient(to right, var(--white, white) 500px, transparent);
 			border-bottom: 1px solid var(--gray-light-2, gray);
 			position: sticky;
 			top: 0px;

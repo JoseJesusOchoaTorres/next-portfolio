@@ -45,7 +45,7 @@ const Contact = props => (
 
 		<style jsx>{`
 			.contact-section {
-				height: 90vh;
+				// height: 90vh;
 			}
 		`}</style>
   	</div>
